@@ -8,6 +8,7 @@ import { LeadAPIs } from "@/services/endpoint/leadList"
 import LeadViewPage from "./LeadViewPage"
 
 export type RecommenedProductsType = {
+  _id:string;
   Image: string;
   Price: string;
   "Product Name": string;
@@ -45,8 +46,6 @@ const Page = ({ params }: { params: { id: string } }) => {
       setLoading(false)
     }
   }
-
-  console.log('lead data ...', leadData?.email, 'hehe')
 
   useEffect(() => {
     fetchData()
