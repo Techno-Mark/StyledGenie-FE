@@ -1,1 +1,1 @@
-# StyledGenie-FE
+# StyledGenie Admin Panel
