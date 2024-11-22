@@ -331,8 +331,6 @@ const LeadViewComponent = ({ leadData, handleClose }: Props) => {
 
   const isApproved = useMemo(()=>leadData.status === leadStatus.accepted,[])
 
-  console.log(selectedProducts)
-
   return (
     <>
       <LoadingBackdrop isLoading={loading} />
@@ -344,7 +342,7 @@ const LeadViewComponent = ({ leadData, handleClose }: Props) => {
 
       <Card className="p-5">
         <Typography variant="h5" className="mb-5">
-          Recommended Products
+          {leadData.status === leadStatus.pending ? " Recommended Products" : "Accepted Products"} 
         </Typography>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
